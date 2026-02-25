@@ -1,0 +1,6 @@
+*.venv
+*.rar
+model_ai/
+.env
+serviceAccountKey.json
+*.zip

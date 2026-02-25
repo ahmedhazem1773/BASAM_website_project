@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BASAM Project | Home</title>
+    <link rel="stylesheet" href="./neww.css">
+    
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo"><a href="index.html" class="lllogo">BASAM</a></div>
+            <nav>
+                <ul>
+                    <li><a href="bage.html">dashboard</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="hero-section">
+        <div class="container hero-content">
+            <div class="text-side">
+                <h1>BASAM Project</h1>
+                <p class="subtitle">Basic Automated Soil & Agriculture Monitoring</p>
+                
+                <div class="project-info">
+                    <h3>Project Overview:</h3>
+                    <ul>
+                        <li>Monitoring soil moisture, temperature, and plant health.</li>
+                        <li>Solar-powered system with an internal backup battery.</li>
+                        <li>Integrated web dashboard with an AI-driven assistant.</li>
+                    </ul>
+                </div>
+                <div class="key">
+<h3 >key feature</h3>
+    <ul>
+        <li>Real-time data mtegration</li>
+        <li>crop prediction algorithms</li>
+    </ul>
+</div>
+
+
+            <div  class="auth-buttons" id="auth-container">
+                    <a href="./sign in.html" class="btn login-btn" >Login</a>
+                  <a href="./create.html" class="btn signup-btn">Create Account</a>
+                </div>
+            </div>
+
+            <div class="image-side">
+                <div class="device-placeholder">
+                    <img src="./imgae of BASAM.jpeg" alt="BASAM Monitoring Device">
+                </div>
+            </div>
+        </div>
+    </main>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        const authContainer = document.getElementById("auth-container");
+        let isLoggedIn = localStorage.getItem("isLoggedIn");
+        let username = localStorage.getItem("username");
+
+        if (isLoggedIn === "true" && authContainer) {
+            authContainer.innerHTML = `
+                <div style="text-align: left;">
+                                <h3 style="color: white; margin-bottom: 10px;">Welcome back, ${username}!</h3>
+                                <a href="bage.html" class="btn signup-btn2" style="background-color:#111827; color:white; ">Go to Dashboard</a>
+                                <button onclick="logout()" class="btn login-btn" style="margin-left:10px; background-color: #ff4d4d; border: none; cursor:pointer;">Logout</button>
+                </div>
+            `;
+        }
+    });
+
+    function logout() {
+        localStorage.clear();
+        window.location.reload();
+    }
+</script>
+</body>
+</html>

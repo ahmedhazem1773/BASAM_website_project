@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ar" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soil Monitoring </title>
+     <link rel="stylesheet" href="app.css" />
+     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+</head>
+
+<body>
+  <!-- <script> 
+    
+if (localStorage.getItem("isLoggedIn") !== "true") {
+  window.location.href = "sign in.html";
+}
+
+function logout() {
+  localStorage.clear();
+  window.location.href = "sign in.html";
+}
+
+
+  </script> -->
+    <header class="navbar" style="padding-block:25px;">
+    <div class="logo">
+        <span class="soil" ><a href="index.html" class="lllogo">BASAM</a></span>
+    </div>
+    <nav class="linkes">
+        <ul>
+            <li><a href="./bage.html">dashboard</a></li></li>
+            <li><a href="#about">About</a></li>
+            <!-- <button type="button" class="logout" onclick="logout()"> logout </button> -->
+          
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+  <header>
+    <h1>Basic Automated Soil & Agriculture Monitoring</h1>
+    
+  </header>
+
+  <div class="top">
+    <div>
+      <div class="sensors">
+        <div class="circles">
+          <div class="circle-card">
+            <div id="circle1" class="circle"><div class="circle-bg"></div><div class="value" id="val1">--%</div></div>
+            <div class="label">Soil Moisture Sensor</div>
+          </div>
+
+          <div class="circle-card">
+            <div id="circle2" class="circle"><div class="circle-bg"></div><div class="value" id="val2">--°C</div></div>
+            <div class="label">DHT22 Temperature</div>
+          </div>
+
+          <div class="circle-card">
+            <div id="circle3" class="circle"><div class="circle-bg"></div><div class="value" id="val3">--%</div></div>
+            <div class="label">DHT22 Humidity</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="chart-card">
+        <canvas id="lineChart1"></canvas>
+        <canvas id="lineChart2"></canvas>
+        <canvas id="lineChart3"></canvas>
+      </div>
+    </div>
+
+    <aside class="info">
+      <div class="date-card">
+        <div class="date-circle" id="dateCircle"> </div>
+        <div class="date-text" id="dateText">  </div>
+      </div>
+
+      <div class="date-card">
+        <div class="date-circle" id="dateCircle"> 
+          <button id="press"> Press </button> </div>
+        <div class="date-text" id="dateText">   <h3 > اضغط لعرض النبات المناسب للزراعة في الوقت الحالي</h3>  </div>
+        <div id="crop-result"> . </div>
+      </div>
+
+      <div class="sensor-info">
+        <div class="info-row">
+          <h3>Soil Moisture</h3>
+          <p id="info1">—</p>
+          <div class="side-val" id="sideVal1">--%</div>
+        </div>
+
+        <div class="info-row">
+          <h3>DHT22 Temperature</h3>
+          <p id="info2">—</p>
+          <div class="side-val" id="sideVal2">--°C</div>
+        </div>
+
+        <div class="info-row">
+          <h3> DHT22 Humidity </h3>
+          <p id="info3">—</p>
+          <div class="side-val" id="sideVal3">--%</div>
+        </div>
+      </div>
+
+      <div class="date-weather">
+        <div class="weather-box">
+          <h2> Weather Now</h2>
+          <div id="weatherResult">loading...</div>
+        </div>
+      </div> 
+
+    
+
+      <div class="mohr">
+        <div id="chat">
+          <div id="msgs"> CHATBOT </div>
+          <div id="inputBar">
+
+            <input id="text" placeholder="ANY QUESTION?" />
+            <button id="sendData">Search</button>
+
+            
+          <div id="chatResult">...</div>
+          
+          </div>
+        </div>
+      </div>
+
+    </aside>
+  </div>
+</div>
+<script src="./app.js"></script>
+<script> 
+    
+if (localStorage.getItem("isLoggedIn") !== "true") {
+  window.location.href = "index.html";
+}
+
+  </script>
+</body>
+</html>
