@@ -38,6 +38,7 @@
 * **Energy Autonomy:** Transitioned to a sustainable **Solar-Powered System** featuring:
      Solar Panel, TP4056 charging circuit, and Lithium-Ion battery for 24/7 off-grid operation.
 * **Intelligence Upgrade:** Transitioned to **Gemini 2.5 Flash** for superior agricultural reasoning.
+* **Compact shell design:** greater space effeciency and possibility of linking multiple modules to cover bigger areas of land
 
 ---
 
